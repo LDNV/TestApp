@@ -25,6 +25,24 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+        internal {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions "environment"
+    productFlavors {
+        prod {
+            dimension "environment"
+            applicationIdSuffix ".prod"
+            versionNameSuffix "-prod"
+        }
+        qa {
+            dimension "environment"
+            applicationIdSuffix ".qa"
+            versionNameSuffix "-qa"
+        }
     }
 
 }
