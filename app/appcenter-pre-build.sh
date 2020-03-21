@@ -2,7 +2,7 @@
 
 echo "This is an App Center Pre-Build script. For more information on how to use App Center build scripts vist: https://docs.microsoft.com/en-us/appcenter/build/custom/scripts"
 
-for entry in "$Users"/*
+for entry in /Users/*
 do
   echo "$entry"
 done
