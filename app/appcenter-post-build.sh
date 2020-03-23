@@ -7,4 +7,4 @@ do
   echo "$entry"
 done
 
-appcenter test run espresso --app "BenjaminRangel/TestApp" --devices 1dce183a --app-path "/app/build/outputs/apk/prod/release/app-prod-release.apk" --test-series "master" --locale "en_US" --build-dir "app/build/outputs/apk/androidTest/prod/debug
+appcenter test run espresso --app "BenjaminRangel/TestApp" --devices 1dce183a --app-path "/app/build/outputs/apk/prod/release/app-prod-release.apk" --test-series "master" --locale "en_US" --build-dir "app/build/outputs/apk/androidTest/prod/debug"
