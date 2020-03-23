@@ -87,4 +87,5 @@ dependencies {
     implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
     implementation "com.microsoft.appcenter:appcenter-distribute:${appCenterSdkVersion}"
     androidTestImplementation('com.microsoft.appcenter:espresso-test-extension:1.4')
+
 }
