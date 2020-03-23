@@ -6,3 +6,5 @@ for entry in /Users/runner/runners/2.165.2/work/1/s/app/*
 do
   echo "$entry"
 done
+
+./gradlew connectedAndroidTest
