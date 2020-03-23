@@ -7,4 +7,4 @@ do
   echo "$entry"
 done
 
-./gradlew connectedAndroidTest
+gradle connectedAndroidTest
