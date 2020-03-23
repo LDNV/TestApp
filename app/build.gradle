@@ -10,8 +10,8 @@ android {
         applicationId "com.example.testapp"
         minSdkVersion 19
         targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        versionCode getVersionCodeB()
+        versionName getVersionNameB()
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -45,6 +45,35 @@ android {
         }
     }
 
+}
+
+static def getVersionCodeB() {
+    def isAppCenter = System.getenv('APPCENTER_BUILD') != null;
+
+    if (isAppCenter) {
+        try {
+            def versionCode = Integer.parseInt(System.getenv('VERSION_CODE'))
+            return versionCode
+        } catch (e) {
+            // ignore
+        }
+    }
+
+    return 1 // default
+}
+
+static String getVersionNameB() {
+    def isAppCenter = System.getenv('APPCENTER_BUILD') != null;
+
+    if (isAppCenter) {
+        try {
+            def versionName = String.valueOf(System.getenv('VERSION_NAME'))
+            return versionName
+        } catch (e) {
+            // ignore
+        }
+    }
+    return 1 // default
 }
 
 dependencies {
